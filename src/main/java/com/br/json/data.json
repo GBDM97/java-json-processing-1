@@ -4,18 +4,21 @@
         "ivnFriends": {
             "Gi":[19, "IVN", "Osasco"],
             "Vini":[17, "IVN", "Osasco"], 
-            "Aaron":[19, "IVN", "SP"],
+            "Aaron":[19, "IVN", "SP"]},
         "calvaryFriends":
         [
             {"name":"Flavio"},
             {"name":"Debs"},
             {"name":"Dani"},
             {"name":"Carol", 
-                "otherInfo":[{
+                "otherInfo":
+                [{
                     "brother":[{"name":"Emerson", "country":"canada"}],
                     "profession":"scientist",
-                    "friends":{
-                        "names":[
+                    "friends":
+                    {
+                        "names":
+                        [
                             {"name":"Giu"},
                             {"name":"Ghian"}
                         ]
@@ -26,4 +29,3 @@
         ]
     }
     }
-}

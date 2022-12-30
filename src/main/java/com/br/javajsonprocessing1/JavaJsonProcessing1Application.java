@@ -26,11 +26,25 @@ public class JavaJsonProcessing1Application {
 		SpringApplication.run(JavaJsonProcessing1Application.class, args);
 		try {
 			JSONParser parser = new JSONParser();
-			File file = new File("src/data.json");
+			File file = new File("src/main/java/com/br/json/data.json");
 			Object obj = parser.parse(new FileReader(file));
 			JSONObject js0 = (JSONObject) obj;
-			var js = js0.get("world");
-			System.out.println("=======>" + js);
+			JSONObject js1 = (JSONObject) js0.get("world");
+			JSONArray js2 = (JSONArray) js1.get("calvaryFriends");
+			JSONObject js3 = (JSONObject) js2.get(3);
+			JSONArray js4 = (JSONArray) js3.get("otherInfo");
+			JSONObject js5 = (JSONObject) js4.get(0);
+			JSONArray js6 = (JSONArray) js5.get("brother");
+			JSONObject js7 = (JSONObject) js6.get(0);
+			String js8 = (String) js7.get("country");
+		
+
+			// JSONArray js3 = (JSONArray) js2.get("Aaron");
+			// String js3 = (String) js1.get("name");
+
+
+
+			System.out.println("=======>" + js8);
 		} catch (Exception e) {
 			System.out.println("=======>" + e);
 		}
