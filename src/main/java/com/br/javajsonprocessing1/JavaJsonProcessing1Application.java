@@ -19,12 +19,13 @@ public class JavaJsonProcessing1Application {
 		SpringApplication.run(JavaJsonProcessing1Application.class, args);
 		String s1 = jParse.jParser();
 		try {
-			for (int fi = initFi(); fi < s1.length();) {
+			for (int fi = findFi(0); fi < s1.length();) {
 				if (s1.substring(fi, fi + 1) == ","|| s1.substring(fi, fi + 1) == "[" || s1.substring(fi, fi + 1) == "{"){
 					fi = s1.indexOf("\"", fi);
 					int ei = s1.indexOf("\"", fi + 1);
 					String out = s1.substring(fi, ei);
 					System.out.println(out);
+					fi = findFi(ei);
 				}
 
 			}	
@@ -33,13 +34,13 @@ public class JavaJsonProcessing1Application {
 		}
 	}
 
-	private static int initFi() {
+	private static int findFi(int index) {
 		String s1 = jParse.jParser();
-		if (s1.indexOf("{") > s1.indexOf("[")){
+		if (s1.indexOf("{", index) > s1.indexOf("[", index)){
 			int fi = s1.indexOf("{");
 			return fi;
 		} else {
-			int fi = s1.indexOf("[");
+			int fi = s1.indexOf("[", index);
 			return fi;
 		}
 		
