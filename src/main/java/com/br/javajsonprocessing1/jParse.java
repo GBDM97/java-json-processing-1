@@ -21,10 +21,11 @@ public static String jParser() {
 		Object obj = parser.parse(new FileReader(file));
 		JSONObject js0 = (JSONObject) obj;
 		JSONObject js1 = (JSONObject) js0.get("world");
-		JSONArray js2 = (JSONArray) js1.get("calvaryFriends");
-		JSONObject js3 = (JSONObject) js2.get(3);
-		JSONArray js4 = (JSONArray) js3.get("otherInfo");
-		var s1 = js4.toString();
+		// JSONArray js2 = (JSONArray) js1.get("calvaryFriends");
+		// JSONObject js3 = (JSONObject) js2.get(3);
+		// JSONArray js4 = (JSONArray) js3.get("otherInfo");
+		var s1 = js1.toString();
+        // System.out.println("=======>" + s1);
         return s1;
     } catch (Exception e) {
         System.out.println("=======>" + e);
